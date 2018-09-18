@@ -5,7 +5,7 @@ pipeline {
     agent {
         docker {
             image 'node:carbon'
-            args '-u root -p 3000:3000 --net host'
+            args '-u root -p 4000:3000 --net host'
         }
     }
     stages {
@@ -18,7 +18,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing...'
-                sh 'curl -XGET http://localhost:3000/getDetails'
+                sh 'curl -XGET http://localhost:4000/getDetails'
             }
         }
         stage('Success') {
