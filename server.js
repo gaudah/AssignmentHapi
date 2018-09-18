@@ -7,7 +7,7 @@ const MongoDBUrl = 'mongodb://localhost:27017/aishu';
 const Routes = require('./Routes/RoutesHapi.js')
 
 const server = Hapi.server({
-    port: 3000,
+    port: 5000,
     host: 'localhost'
 });
 
