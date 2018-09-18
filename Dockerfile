@@ -14,4 +14,4 @@ RUN npm install
 # Bundle app source
 COPY . .
 
-CMD ["pm2-docker", "clusterServer.js"]
+CMD ["pm2-docker", "server.js"]
