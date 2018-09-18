@@ -24,7 +24,7 @@ pipeline {
         stage('Success') {
             steps {
                 echo 'Testing Success...'
-                sh 'success'
+                sh 'echo success'
             }
         }
     }
