@@ -19,6 +19,8 @@ stages {
 		sh 'pwd'
 		sh 'ls ../../../../../home/sumit/TESTPATH/'
 		sh 'pwd'
+		sh 'cd ../../../../../home/sumit/'
+		sh 'pwd'
             }
         }
 
