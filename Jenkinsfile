@@ -17,7 +17,7 @@ stages {
 		sh 'pwd'
 		sh 'cp ${HOME}/temp.js ${HOME}/workspace/test/'
 		sh 'pwd'
-		sh 'ls ../../../../../'
+		sh 'ls ../../../../../home/'
             }
         }
 
