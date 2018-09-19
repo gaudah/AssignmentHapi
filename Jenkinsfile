@@ -12,7 +12,8 @@ stages {
             steps {
                 echo 'copy path of pipeline...'
 		sh 'ls ${HOME}/workspace/test'
-		sh 'cp Jenkinsfile TESTPATH/'
+		sh 'pwd'
+		sh 'cp temp.js ${HOME}'
             }
         }
 
