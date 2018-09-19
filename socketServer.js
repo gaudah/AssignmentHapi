@@ -9,7 +9,7 @@ var redis = require('socket.io-redis');
 
 
 const server = Hapi.server({
-    port: 5000,
+    port: 9000,
     host: 'localhost'
 });
 

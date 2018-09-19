@@ -1,3 +1,23 @@
+
+/*
+sudo docker build -t dockerimage111 .
+sudo docker run -p 9000:9000 --net host -d --name test_endpoints111 dockerimage111
+
+
+
+*/
+
+
+/* Method 1:=
+sudo docker build -t dockerimage2 .
+sudo docker rm $(sudo docker ps -a -q) // To remove docker containers running
+sudo docker run -p 5000:5000 --net host --rm --name test_endpoints dockerimage2
+now run following in browser:= http://localhost:5000/getDetails
+
+/* Method 2:=
 sudo docker build -t dockerimage1 .
-sudo docker run -p 49161:8080 -d dockerimage1
-now run following in browser:= http://localhost:49161/
+sudo docker run -p 5000:5000 -d dockerimage1
+now run following in browser:= http://localhost:5000/getDetails
+*/
+
+
