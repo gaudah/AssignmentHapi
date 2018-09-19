@@ -34,7 +34,7 @@ stages {
 
 stage('File') {
 steps {
-fileOperations([fileCopyOperation(excludes: '', flattenFiles: false, includes: 'home/sumit/Temp/**', targetLocation: 'home/sumit/TESTPATH/')])
+fileOperations([fileCopyOperation(excludes: '', flattenFiles: false, includes: 'home/sumit/Temp/*.js', targetLocation: 'home/sumit/TESTPATH/')])
 }
 }
 
