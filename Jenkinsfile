@@ -11,7 +11,8 @@ stages {
  stage('Build') {
             steps {
                 echo 'copy path of pipeline...'
-		sh 'cp -vr /home/sumit${JENKINS_HOME}/wokspace/test/ /home/sumit/TESTPATH/'
+		sh 'ls $HOME
+		sh 'cp -vr ${HOME}/${JENKINS_HOME}/wokspace/test/ ${HOME}/TESTPATH/'
             }
         }
 
