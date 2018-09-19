@@ -2,7 +2,13 @@
 
 pipeline {
 
-    agent any
+    agent {
+        docker {
+            image 'carbon'
+            args '-u root'
+        }
+    }
+
     stages {
         stage('Build') {
             steps {
