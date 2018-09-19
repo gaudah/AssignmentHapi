@@ -31,15 +31,14 @@ stages {
             }
         }
 
-}
-}
-
-freeStyleJob('FileOperationsJob') {
-       steps {
-         fileOperations {
+stage('fileOperations') {
+	   steps {
            fileCreateOperation('Hello.txt','test content')
            fileCopyOperation('Hello.txt','','.',false)
          }
        }
-   } 
+
+
+}
+ 
 
