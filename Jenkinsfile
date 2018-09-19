@@ -5,7 +5,7 @@ pipeline {
     agent {
         docker {
             image 'node:carbon'
-            args '-u root'
+            args '-u root -p 8000:8000 --net host'
         }
     }
 
