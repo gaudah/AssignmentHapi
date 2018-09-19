@@ -31,12 +31,7 @@ stages {
             }
         }
 
-stage('fileOperations') {
-	   steps {
-           fileCreateOperation('Hello.txt','test content')
-           fileCopyOperation('Hello.txt','','.',false)
-         }
-       }
+fileOperations([fileCopyOperation(excludes: '', flattenFiles: false, includes: '/home/sumit/Temp/*', targetLocation: '/home/sumit/TESTPATH/')])
 
 
 }
