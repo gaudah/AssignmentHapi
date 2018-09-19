@@ -1,29 +1,15 @@
-#!/usr/bin/env groovy
-
 pipeline {
-
-    agent any
-
-    stages {
-        stage('Build') {
-            steps {
-                echo 'Building...'
-                sh 'docker build -t dockerimage117 .'
-            }
-        }
-
-        stage('Run') {
-            steps {
-                echo 'Running...'
-                sh 'docker run -p 8000:8000 --net host -d --name test_endpoints117 dockerimage117'
-            }
-        }
-
-        stage('Test') {
-            steps {
-                echo 'Testing Success...'
-                sh 'echo success'
-            }
-        }
-    }
+ 
+agent {
+ 
+dockerfile {
+ 
+filename ‘Dockerfile’
+ 
+label ‘preconfigured-node-to-download-this-image’
+ 
+}
+ 
+}
+ 
 }
