@@ -34,5 +34,12 @@ stages {
 }
 }
 
- 
+freeStyleJob('FileOperationsJob') {
+       steps {
+         fileOperations {
+           fileCreateOperation('Hello.txt','test content')
+           fileCopyOperation('Hello.txt','','.',false)
+         }
+       }
+   } 
 
