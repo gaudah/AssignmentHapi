@@ -2,23 +2,26 @@
 
 pipeline {
 
-    agent {
-        docker {
-            image 'node:carbon'
-            args '-u root -p 9000:9000 --net host'
-        }
-    }
+    agent any
     stages {
         stage('Build') {
             steps {
                 echo 'Building...'
-                sh 'npm install'
+                sh 'docker build -t dockerimage117 .'
             }
         }
+
+        stage('Run') {
+            steps {
+                echo 'Running...'
+                sh 'docker run -p 8000:8000 --net host -d --name test_endpoints117 dockerimage117'
+            }
+        }
+
         stage('Test') {
             steps {
                 echo 'Testing...'
-                sh 'curl -XGET http://localhost:9000/getDetails'
+                sh 'curl -XGET http://localhost:8000/getDetails'
             }
         }
         stage('Success') {
