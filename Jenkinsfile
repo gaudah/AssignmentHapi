@@ -8,7 +8,7 @@ agent any
 stages {
 
 
- stage('Test') {
+ stage('Build') {
             steps {
                 echo 'copy path of pipeline...'
             	sh 'cp ${JENKINS_HOME}/jobs/wokspace/koa pipeline/ /home/sumit/TESTPATH/' 
