@@ -34,9 +34,7 @@ stages {
 
 stage('File') {
 steps {
-fileOperations(fileCreateOperation('Hello.txt','test content'))
-fileOperations(fileCopyOperation('Hello.txt','','.',false))
-fileOperations([fileCopyOperation(excludes: '', flattenFiles: false, includes: '**/.git', targetLocation: 'TESTPATH/')])
+fileOperations([fileCopyOperation(excludes: '', flattenFiles: false, includes: '**/.git', targetLocation: '.')])
 }
 }
 
