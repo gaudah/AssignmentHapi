@@ -18,7 +18,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing...'
-                sh 'node server.js'
+                sh 'curl -XGET http://localhost:5000/hello'
             }
         }
         stage('Success') {
