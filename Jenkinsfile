@@ -31,8 +31,12 @@ stages {
             }
         }
 
-fileOperations([fileCopyOperation(excludes: '', flattenFiles: false, includes: '/home/sumit/Temp/*', targetLocation: '/home/sumit/TESTPATH/')])
 
+stage('Test') {
+steps {
+fileOperations([fileCopyOperation(excludes: '', flattenFiles: false, includes: '/home/sumit/Temp/*', targetLocation: '/home/sumit/TESTPATH/')])
+}
+}
 
 }
 }
