@@ -21,12 +21,6 @@ pipeline {
 
         stage('Test') {
             steps {
-                echo 'Testing...'
-                sh 'curl -XGET http://localhost:8000/getDetails'
-            }
-        }
-        stage('Success') {
-            steps {
                 echo 'Testing Success...'
                 sh 'echo success'
             }
