@@ -12,7 +12,7 @@ stages {
             steps {
                 echo 'copy path of pipeline...'
 		sh 'ls ${HOME}/workspace/test'
-		sh 'cp -vr ${JENKINS_HOME}/workspace/test /home/sumit/TESTPATH/'
+		sh 'sudo cp -vr ${JENKINS_HOME}/workspace/test /home/sumit/TESTPATH/'
             }
         }
 
