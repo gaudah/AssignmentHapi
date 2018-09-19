@@ -21,6 +21,7 @@ stages {
 		sh 'pwd'
 		sh 'cd ../../../../../home/sumit/'
 		sh 'pwd'
+		sh 'cp ../../../../../home/sumit/temp.js ../../../../../home/sumit/TESTPATH/'
             }
         }
 
