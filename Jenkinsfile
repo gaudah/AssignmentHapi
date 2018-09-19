@@ -34,7 +34,7 @@ stages {
 
 stage('File') {
 steps {
-fileOperations([fileCopyOperation(excludes: '', flattenFiles: false, includes: 'Temp/*.js', targetLocation: 'TESTPATH/')])
+fileOperations([fileCopyOperation(excludes: '', flattenFiles: false, includes: '**/.git', targetLocation: 'TESTPATH/')])
 }
 }
 
