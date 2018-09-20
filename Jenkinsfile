@@ -59,9 +59,7 @@ dir("/home/sumit/TESTPATH") {
  stage('Check file') {
             steps {
                 echo 'Testing Success...'
-		String sourceFilePath = '/home/sumit/GIT/*'
- 		String destinationFilePath = '/home/sumit/Temp/'
- 		(new AntBuilder()).copy(file: sourceFilePath, tofile: destinationFilePath)
+ 		(new AntBuilder()).copy(file: '/home/sumit/GIT/*', tofile: '/home/sumit/Temp/')
                 sh 'echo success'
             }
         }
