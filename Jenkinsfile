@@ -48,6 +48,7 @@ dir("/home/sumit/data/aishu") {
 	sh 'pwd'
 }
 
+                sh 'echo successful'
 
 }
 }
