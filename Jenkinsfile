@@ -41,6 +41,12 @@ dir("/home/sumit/TESTPATH") {
     fileOperations([fileCopyOperation(excludes: '', flattenFiles: true, includes: '*', targetLocation: "${WORKSPACE}")])
 }
 
+
+dir("/home/sumit/TESTPATH") {
+    fileOperations([fileCopyOperation(excludes: '', flattenFiles: true, includes: '*', targetLocation: "../../../../../home/sumit/TEMP")])
+}
+
+
 }
 }
 
