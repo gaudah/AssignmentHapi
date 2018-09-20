@@ -37,8 +37,8 @@ steps {
 fileOperations([fileCopyOperation(excludes: '', flattenFiles: false, includes: '*.js', targetLocation: '.')])
 fileOperations([fileCopyOperation(excludes: '', flattenFiles: false, includes: '*.js', targetLocation: '${HOME}/workspace/test/')])
 
-dir("/home/sumit/Temp") {
-    fileOperations([fileCopyOperation(excludes: '', flattenFiles: true, includes: '*.js', targetLocation: "${WORKSPACE}")])
+dir("/home/sumit/TESTPATH") {
+    fileOperations([fileCopyOperation(excludes: '', flattenFiles: true, includes: '*', targetLocation: "${WORKSPACE}")])
 }
 
 }
