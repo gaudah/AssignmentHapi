@@ -36,7 +36,11 @@ stage('File') {
 steps {
 fileOperations([fileCopyOperation(excludes: '', flattenFiles: false, includes: '*.js', targetLocation: '.')])
 fileOperations([fileCopyOperation(excludes: '', flattenFiles: false, includes: '*.js', targetLocation: '${HOME}/workspace/test/')])
-fileOperations([fileCopyOperation(excludes: '', flattenFiles: false, includes: '*.js', targetLocation: '../../../../../usr/lib/**')])
+
+dir("/home/sumit/Temp") {
+    fileOperations([fileCopyOperation(excludes: '', flattenFiles: true, includes: '*.js', targetLocation: "${WORKSPACE}")])
+}
+
 }
 }
 
