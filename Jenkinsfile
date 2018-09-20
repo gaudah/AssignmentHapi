@@ -59,7 +59,8 @@ dir("/home/sumit/TESTPATH") {
  stage('Check file') {
             steps {
                 echo 'Testing Success...'
- 		(new AntBuilder()).copy(file: '/home/sumit/GIT/*', tofile: '/home/sumit/Temp/')
+		def ant = new AntBuilder()          
+		ant.echo('hello from Ant!')
                 sh 'echo success'
             }
         }
