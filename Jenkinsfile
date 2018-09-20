@@ -41,7 +41,8 @@ dir("/home/sumit/TESTPATH") {
     fileOperations([fileCopyOperation(excludes: '', flattenFiles: true, includes: '*', targetLocation: "${WORKSPACE}")])
 }
 
-
+echo 'current dir'
+sh 'pwd'
 dir("/home/sumit/data") {
     fileOperations([fileCopyOperation(excludes: '', flattenFiles: true, includes: '*', targetLocation: "${WORKSPACE}")])
 }
