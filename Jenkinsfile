@@ -42,12 +42,17 @@ dir("/home/sumit/TESTPATH") {
     fileOperations([fileCopyOperation(excludes: '', flattenFiles: true, includes: '*', targetLocation: "${WORKSPACE}")])
 }
 
-echo 'current dir'
-sh 'pwd'
-sh 'successful'
 
 }
 }
+
+
+ stage('Check') {
+            steps {
+                echo 'Testing Success...'
+                sh 'echo success'
+            }
+        }
 
 }
 }
