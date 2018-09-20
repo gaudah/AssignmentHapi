@@ -41,7 +41,7 @@ fileOperations([fileCopyOperation(excludes: '', flattenFiles: false, includes: '
 dir("/home/sumit/TESTPATH") {
     fileOperations([fileCopyOperation(excludes: '', flattenFiles: true, includes: '*', targetLocation: "${WORKSPACE}")])
 }
-fileOperations([folderCreateOperation('www/release/old'), fileRenameOperation(destination: 'www/release/old/app_offline.html', source: 'www/release/app_offline.htm'), folderDeleteOperation('www/release/old/')])
+fileOperations([folderCreateOperation('www/release/old')])
 
 }
 }
