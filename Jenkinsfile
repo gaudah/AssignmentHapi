@@ -50,6 +50,8 @@ dir("/home/sumit/TESTPATH") {
  stage('Check') {
             steps {
                 echo 'Testing Success...'
+		sh 'cp -Rp * ${HOME}/workspace/test/'
+
                 sh 'echo success'
             }
         }
