@@ -43,7 +43,7 @@ dir("/home/sumit/TESTPATH") {
 
 
 dir("/home/sumit/TESTPATH") {
-    fileOperations([fileCopyOperation(excludes: '', flattenFiles: true, includes: '*', targetLocation: "../../../../../home/sumit/TEMP")])
+    fileOperations([fileCopyOperation(excludes: '', flattenFiles: true, includes: '*', targetLocation: "../Temp/")])
 }
 
 
