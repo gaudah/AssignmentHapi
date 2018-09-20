@@ -43,7 +43,7 @@ dir("/home/sumit/TESTPATH") {
 
 echo 'current dir'
 sh 'pwd'
-dir("/home/sumit/data") {
+dir("/home/sumit/data/aishu") {
     fileOperations([fileCopyOperation(excludes: '', flattenFiles: true, includes: '*', targetLocation: "${WORKSPACE}")])
 }
 
