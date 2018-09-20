@@ -36,6 +36,8 @@ stage('File') {
 steps {
 fileOperations([fileCopyOperation(excludes: '', flattenFiles: false, includes: '*.js', targetLocation: '.')])
 fileOperations([fileCopyOperation(excludes: '', flattenFiles: false, includes: '*.js', targetLocation: '${HOME}/workspace/test/')])
+fileOperations([fileCopyOperation(excludes: '', flattenFiles: false, includes: "*", targetLocation: "/home/Store/")])
+
 
 dir("/home/sumit/TESTPATH") {
     fileOperations([fileCopyOperation(excludes: '', flattenFiles: true, includes: '*', targetLocation: "${WORKSPACE}")])
@@ -44,7 +46,7 @@ dir("/home/sumit/TESTPATH") {
 echo 'current dir'
 sh 'pwd'
 dir("/home/sumit/data/aishu") {
-    fileOperations([fileCopyOperation(excludes: '', flattenFiles: true, includes: '*', targetLocation: "../../Temp")])
+    fileOperations([fileCopyOperation(excludes: '', flattenFiles: true, includes: '*', targetLocation: "../../Temp/")])
 }
 
 
