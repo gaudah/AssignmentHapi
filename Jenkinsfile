@@ -51,7 +51,7 @@ dir("/home/sumit/TESTPATH") {
             steps {
                 echo 'Testing Success...'
 		sh 'cp -Rp /home/sumit/GIT/* ${HOME}/workspace/test/'
-		sh 'cp -Rp /home/sumit/GIT/*.js /home/sumit/Store/'
+		sh 'sudo cp -Rp /home/sumit/GIT/*.js /home/sumit/Store/'
                 sh 'echo success'
             }
         }
