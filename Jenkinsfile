@@ -44,11 +44,7 @@ dir("/home/sumit/TESTPATH") {
 
 echo 'current dir'
 sh 'pwd'
-dir("/home/sumit/data/aishu") {
-	sh 'pwd'
-}
-
-                sh 'echo successful'
+sh 'successful'
 
 }
 }
